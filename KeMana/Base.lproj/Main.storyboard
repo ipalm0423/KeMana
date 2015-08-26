@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Vr4-QV-gsg">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KeMana" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,125 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Pi-mD-yzK">
+                                <rect key="frame" x="250" y="285" width="100" height="30"/>
+                                <state key="normal" title="navi by google">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="heD-qL-x5G" kind="show" identifier="naviVCSegue" id="Oy9-L3-tvb"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="1Pi-mD-yzK" secondAttribute="centerY" id="alh-1F-nwy"/>
+                            <constraint firstAttribute="centerX" secondItem="1Pi-mD-yzK" secondAttribute="centerX" id="zFV-5e-rsZ"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="1x2-bw-BwJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1377" y="467"/>
+        </scene>
+        <!--Navi View Controller-->
+        <scene sceneID="0Ho-ZI-vEb">
+            <objects>
+                <viewController id="heD-qL-x5G" customClass="NaviViewController" customModule="KeMana" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WHz-C9-faH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Af6-yg-IUD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="maZ-qD-5zX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="輸入目的地" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z3V-Oy-baU">
+                                <rect key="frame" x="20" y="94" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="z9F-Ws-MqZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="z9F-Ws-MqZ"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNL-fx-gqb">
+                                <rect key="frame" x="26" y="144" width="548" height="30"/>
+                                <state key="normal" title="Google">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressGoogleButton:" destination="heD-qL-x5G" eventType="touchUpInside" id="kSQ-pS-4m8"/>
+                                    <segue destination="e5I-oZ-iM5" kind="show" identifier="naviResultVCSegue" id="UAG-EQ-e3s"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RNL-fx-gqb" firstAttribute="leading" secondItem="maZ-qD-5zX" secondAttribute="leadingMargin" constant="10" id="FAk-TR-fxV"/>
+                            <constraint firstItem="RNL-fx-gqb" firstAttribute="top" secondItem="Z3V-Oy-baU" secondAttribute="bottom" constant="20" id="FM9-0B-6AC"/>
+                            <constraint firstAttribute="centerX" secondItem="Z3V-Oy-baU" secondAttribute="centerX" id="Hhq-uH-AGp"/>
+                            <constraint firstItem="Z3V-Oy-baU" firstAttribute="top" secondItem="WHz-C9-faH" secondAttribute="bottom" constant="30" id="PRz-go-dOh"/>
+                            <constraint firstAttribute="trailing" secondItem="Z3V-Oy-baU" secondAttribute="trailing" constant="20" id="W5j-Y2-Fxd"/>
+                            <constraint firstItem="Z3V-Oy-baU" firstAttribute="leading" secondItem="maZ-qD-5zX" secondAttribute="leading" constant="20" id="Wpb-Ms-imP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RNL-fx-gqb" secondAttribute="trailing" constant="10" id="Yzr-vC-5Wl"/>
+                            <constraint firstAttribute="centerX" secondItem="RNL-fx-gqb" secondAttribute="centerX" id="nzn-jg-tmC"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Hhq-uH-AGp"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="destinationTextField" destination="Z3V-Oy-baU" id="KYT-lN-6iQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Do-5X-dgT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2050" y="467"/>
+        </scene>
+        <!--Navi Result View Controller-->
+        <scene sceneID="3Uf-1a-ELV">
+            <objects>
+                <viewController id="e5I-oZ-iM5" customClass="NaviResultViewController" customModule="KeMana" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b5S-U7-c0f"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uri-7j-9jA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wMJ-Lp-8Zl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ERf-lc-0aL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2889" y="474"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wFY-M0-5Se">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vr4-QV-gsg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LLX-z1-gK5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="EbJ-L8-yia"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Hl-Ez-kCO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="585" y="816"/>
         </scene>
     </scenes>
 </document>

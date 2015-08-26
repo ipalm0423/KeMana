@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-KeMana-Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-KeMana-AlamofireObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-KeMana-ObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-KeMana-SugarRecord.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-KeMana.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>4583DF7794F0FFACFA41C4F9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A0E6C7662E452F2577EB190B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AFD2A80E7E1352869A662AF6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C9E3FDC5A223B8D86A882C02</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DA2E9BF11836778681D6958C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

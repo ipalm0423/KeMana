@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		368C952AE0BE0B4F4E80188D /* Pods_KeMana.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 585262B03E9A2AA9ABA2A2BD /* Pods_KeMana.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AC3B93861B8E249800F75A6D /* NaviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3B93851B8E249800F75A6D /* NaviViewController.swift */; };
+		AC3B93881B8E24A300F75A6D /* NaviResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3B93871B8E24A300F75A6D /* NaviResultViewController.swift */; };
+		AC3B938A1B8E25A900F75A6D /* JSONMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3B93891B8E25A900F75A6D /* JSONMappable.swift */; };
 		AC67CF031B8DC863001347ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC67CF021B8DC863001347ED /* AppDelegate.swift */; };
 		AC67CF061B8DC864001347ED /* KeMana.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC67CF041B8DC864001347ED /* KeMana.xcdatamodeld */; };
 		AC67CF081B8DC864001347ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC67CF071B8DC864001347ED /* ViewController.swift */; };
@@ -27,6 +31,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		585262B03E9A2AA9ABA2A2BD /* Pods_KeMana.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeMana.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A8E21B3EDD54B0C30F929E4 /* Pods-KeMana.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeMana.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeMana/Pods-KeMana.debug.xcconfig"; sourceTree = "<group>"; };
+		955DF0192547EE3B6FA61EA6 /* Pods-KeMana.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeMana.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeMana/Pods-KeMana.release.xcconfig"; sourceTree = "<group>"; };
+		AC3B93851B8E249800F75A6D /* NaviViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaviViewController.swift; sourceTree = "<group>"; };
+		AC3B93871B8E24A300F75A6D /* NaviResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaviResultViewController.swift; sourceTree = "<group>"; };
+		AC3B93891B8E25A900F75A6D /* JSONMappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONMappable.swift; sourceTree = "<group>"; };
 		AC67CEFD1B8DC863001347ED /* KeMana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeMana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC67CF011B8DC863001347ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC67CF021B8DC863001347ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				368C952AE0BE0B4F4E80188D /* Pods_KeMana.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +69,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A16A93FC5609A7C83D584AF3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A8E21B3EDD54B0C30F929E4 /* Pods-KeMana.debug.xcconfig */,
+				955DF0192547EE3B6FA61EA6 /* Pods-KeMana.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AC67CEF41B8DC863001347ED = {
 			isa = PBXGroup;
 			children = (
 				AC67CEFF1B8DC863001347ED /* KeMana */,
 				AC67CF181B8DC864001347ED /* KeManaTests */,
 				AC67CEFE1B8DC863001347ED /* Products */,
+				A16A93FC5609A7C83D584AF3 /* Pods */,
+				D4F3544C13871A6428BD4119 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +103,8 @@
 			children = (
 				AC67CF021B8DC863001347ED /* AppDelegate.swift */,
 				AC67CF071B8DC864001347ED /* ViewController.swift */,
+				AC3B93851B8E249800F75A6D /* NaviViewController.swift */,
+				AC3B93871B8E24A300F75A6D /* NaviResultViewController.swift */,
 				AC67CF091B8DC864001347ED /* Main.storyboard */,
 				AC67CF0C1B8DC864001347ED /* Images.xcassets */,
 				AC67CF0E1B8DC864001347ED /* LaunchScreen.xib */,
@@ -94,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				AC67CF011B8DC863001347ED /* Info.plist */,
+				AC3B93891B8E25A900F75A6D /* JSONMappable.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -115,6 +140,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D4F3544C13871A6428BD4119 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				585262B03E9A2AA9ABA2A2BD /* Pods_KeMana.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,9 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC67CF1F1B8DC864001347ED /* Build configuration list for PBXNativeTarget "KeMana" */;
 			buildPhases = (
+				DF9476610D2F3ABE5C9BB703 /* Check Pods Manifest.lock */,
 				AC67CEF91B8DC863001347ED /* Sources */,
 				AC67CEFA1B8DC863001347ED /* Frameworks */,
 				AC67CEFB1B8DC863001347ED /* Resources */,
+				69C11585C33D47EB3D1C2F2A /* Embed Pods Frameworks */,
+				FC1FE29AF9EBDC097F62507F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,12 +246,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		69C11585C33D47EB3D1C2F2A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KeMana/Pods-KeMana-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF9476610D2F3ABE5C9BB703 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FC1FE29AF9EBDC097F62507F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KeMana/Pods-KeMana-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AC67CEF91B8DC863001347ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC3B93861B8E249800F75A6D /* NaviViewController.swift in Sources */,
+				AC3B938A1B8E25A900F75A6D /* JSONMappable.swift in Sources */,
 				AC67CF081B8DC864001347ED /* ViewController.swift in Sources */,
+				AC3B93881B8E24A300F75A6D /* NaviResultViewController.swift in Sources */,
 				AC67CF061B8DC864001347ED /* KeMana.xcdatamodeld in Sources */,
 				AC67CF031B8DC863001347ED /* AppDelegate.swift in Sources */,
 			);
@@ -344,6 +431,7 @@
 		};
 		AC67CF201B8DC864001347ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A8E21B3EDD54B0C30F929E4 /* Pods-KeMana.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KeMana/Info.plist;
@@ -354,6 +442,7 @@
 		};
 		AC67CF211B8DC864001347ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 955DF0192547EE3B6FA61EA6 /* Pods-KeMana.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KeMana/Info.plist;
@@ -415,6 +504,7 @@
 				AC67CF211B8DC864001347ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC67CF221B8DC864001347ED /* Build configuration list for PBXNativeTarget "KeManaTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +513,7 @@
 				AC67CF241B8DC864001347ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
